@@ -16,17 +16,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/orangtua', function () {
-	$or = App\orangtua::all();
-	foreach ($or as $data) {
-		echo $data->nama_ibu." dengan ";
-		echo $data->nama_ayah." ";
-		foreach ($data->anak as $key) {
-			echo "<li>$key->nama</li><br>";
-		}
-	}
-});
+// Route::get('/orangtua', function () {
+// 	$or = App\orangtua::all();
+// 	foreach ($or as $data) {
+// 		echo $data->nama_ibu." dengan ";
+// 		echo $data->nama_ayah." ";
+// 		foreach ($data->anak as $key) {
+// 			echo "<li>$key->nama</li><br>";
+// 		}
+// 	}
+// });l
 
 Route::get('/percobaan', 'MyController@index');
 Route::get('/tampilan', 'MyController@tampilan');
 Route::get('/tampilanmodel', 'MyController@tampilanmodel');
+Route::resource('/orangtua', 'orangtuaController');
+Auth::routes();
