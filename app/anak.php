@@ -8,12 +8,12 @@ class anak extends Model
 {
     //
     protected $table = 'anaks';
-    protected $fiillable = ['nama','orangtua_id','umur_ibu','umur_ayah','alamat'];
-    protected $visible = ['nama_ibu','nama_ayah','umur_ibu','umur_ayah','alamat'];
+    protected $fiillable = ['nama','orangtua_id', 'umur','alamat'];
+    protected $visible = ['nama','orangtua_id', 'umur','alamat'];
     public $timestamps = 'true';
 
-    public function anak()
+    public function orangtua()
     {
-    	return $this->hasMany('App\anak','orangtua_id');
+    	return $this->belongsTo('App\orangtua','orangtua_id');
     }
 }

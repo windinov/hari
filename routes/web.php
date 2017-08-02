@@ -31,4 +31,7 @@ Route::get('/percobaan', 'MyController@index');
 Route::get('/tampilan', 'MyController@tampilan');
 Route::get('/tampilanmodel', 'MyController@tampilanmodel');
 Route::resource('/orangtua', 'orangtuaController');
+Route::resource('/anak', 'anakController');
+Route::resource('/author', 'authorController');
+Route::resource('/book', 'bookController');
 Auth::routes();

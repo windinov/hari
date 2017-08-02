@@ -23,10 +23,10 @@
 	@foreach($ortu as $data)
 	<tr>
 	<td>{{$data->nama_ayah}}</td>
-    <td>{{$data->nama_ayah}}</td>
-	<td>{{$data->nama_ayah}}</td>
-	<td>{{$data->nama_ayah}}</td>
-	<td>{{$data->nama_ayah}}</td>
+    <td>{{$data->nama_ibu}}</td>
+	<td>{{$data->umur_ayah}}</td>
+	<td>{{$data->umur_ibu}}</td>
+	<td>{{$data->alamat}}</td>
 	<td>@foreach($data->anak as $a)
 	<li>{{$a->nama}}</li>
 	@endforeach
